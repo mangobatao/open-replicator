@@ -23,6 +23,7 @@ import com.google.code.or.common.glossary.UnsignedLong;
 import com.google.code.or.common.glossary.column.BitColumn;
 import com.google.code.or.common.glossary.column.StringColumn;
 import com.google.code.or.io.XInputStream;
+import com.google.code.or.io.impl.XByteArrayInputStream;
 import com.google.code.or.io.impl.XInputStreamImpl;
 
 /**
@@ -37,7 +38,7 @@ public class XDeserializer implements XInputStream {
 	 * 
 	 */
 	public XDeserializer(byte[] data) {
-		this.tis = new XInputStreamImpl(new ByteArrayInputStream(data));
+        this.tis = new XByteArrayInputStream(data);
 	}
 	
 	/**
